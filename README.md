@@ -4,7 +4,7 @@
 - **In-memory storage** — used a `LinkedHashMap` to store providers rather than a database. Sufficient for this task and keeps setup simple.
 - **Status calculated dynamically** — `getStatus()` lives on the `Provider` model and computes status at read time rather than storing it. This means it stays accurate without needing updates.
 - **3-month boundary** — a statement older than 3 months is OUTDATED. A statement exactly 3 months old is considered OUTDATED (using `isBefore` with `minusMonths(3)`).
-- **Java 21 / Spring Boot 4.1.1** — latest LTS Java with the latest stable Spring Boot.
+- **Java 21 / Spring Boot 4.1.1** — Java 21 the latest stable Spring Boot.
 - **CORS** — configured to allow requests from `localhost:5173` (Vite dev server).
 
 ### Frontend
